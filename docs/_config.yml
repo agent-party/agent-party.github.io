@@ -1,0 +1,62 @@
+title: Agent Party - Clubhouse
+description: Where AI Collaboration Comes Alive - Transform isolated AI tools into collaborative teams that work together to solve your most complex challenges.
+baseurl: ""
+url: "https://www.agent-party.com"
+github_org: "https://github.com/agent-party"
+github_repo: "https://github.com/agent-party/clubhouse"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  agents:
+    output: true
+  features:
+    output: true
+  sprints:
+    output: true
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "agents"
+    values:
+      layout: "agent"
+  - scope:
+      path: "markdown"
+    values:
+      layout: "documentation"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .gitignore
+  - README.md
+  - .github
+  - setup.sh
+  - setup.bat
+  - Dockerfile
+  - docker-compose.yml

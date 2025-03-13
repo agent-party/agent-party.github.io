@@ -1,0 +1,69 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+  
+  <!-- DJ deck base -->
+  <rect x="55" y="90" width="90" height="60" rx="5" ry="5" fill="#2A325E" />
+  
+  <!-- Deck details -->
+  <rect x="60" y="95" width="80" height="50" rx="3" ry="3" fill="#444C7F" />
+  
+  <!-- Turntables -->
+  <circle cx="75" cy="120" r="15" fill="#5DFFA3" />
+  <circle cx="125" cy="120" r="15" fill="#5DFFA3" />
+  
+  <!-- Turntable centers -->
+  <circle cx="75" cy="120" r="5" fill="#2A325E" />
+  <circle cx="125" cy="120" r="5" fill="#2A325E" />
+  
+  <!-- Mixer controls -->
+  <rect x="95" y="105" width="10" height="30" rx="2" ry="2" fill="#FF9E5E" />
+  
+  <!-- Slider knobs -->
+  <rect x="94" y="110" width="12" height="4" rx="1" ry="1" fill="#FFD700" />
+  <rect x="94" y="120" width="12" height="4" rx="1" ry="1" fill="#FFD700" />
+  <rect x="94" y="130" width="12" height="4" rx="1" ry="1" fill="#FFD700" />
+  
+  <!-- DJ head/face (on top of the deck) -->
+  <circle cx="100" cy="75" r="20" fill="#4A6FFF" />
+  
+  <!-- Headphones -->
+  <path d="M80,75 C75,60 125,60 120,75" fill="none" stroke="#2A325E" stroke-width="5" />
+  <circle cx="80" cy="75" r="8" fill="#2A325E" />
+  <circle cx="120" cy="75" r="8" fill="#2A325E" />
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="75" r="5" fill="#FFFFFF" />
+  <circle cx="110" cy="75" r="5" fill="#FFFFFF" />
+  <circle cx="90" cy="75" r="2" fill="#2A325E" />
+  <circle cx="110" cy="75" r="2" fill="#2A325E" />
+  
+  <!-- Mouth - cool DJ smile -->
+  <path d="M92,83 Q100,90 108,83" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Sound waves -->
+  <path d="M40,110 Q45,105 40,100 Q45,95 40,90" fill="none" stroke="#4A6FFF" stroke-width="3" stroke-linecap="round" />
+  <path d="M35,115 Q43,105 35,95 Q43,85 35,75" fill="none" stroke="#4A6FFF" stroke-width="3" stroke-linecap="round" />
+  
+  <path d="M160,110 Q155,105 160,100 Q155,95 160,90" fill="none" stroke="#4A6FFF" stroke-width="3" stroke-linecap="round" />
+  <path d="M165,115 Q157,105 165,95 Q157,85 165,75" fill="none" stroke="#4A6FFF" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Network nodes representing orchestration -->
+  <circle cx="50" cy="50" r="5" fill="#FF9E5E" />
+  <circle cx="70" cy="40" r="5" fill="#FF9E5E" />
+  <circle cx="130" cy="40" r="5" fill="#FF9E5E" />
+  <circle cx="150" cy="50" r="5" fill="#FF9E5E" />
+  
+  <!-- Connection lines -->
+  <line x1="50" y1="50" x2="70" y2="40" stroke="#2A325E" stroke-width="1" />
+  <line x1="70" y1="40" x2="100" y2="55" stroke="#2A325E" stroke-width="1" />
+  <line x1="100" y1="55" x2="130" y2="40" stroke="#2A325E" stroke-width="1" />
+  <line x1="130" y1="40" x2="150" y2="50" stroke="#2A325E" stroke-width="1" />
+  
+  <!-- VU meters -->
+  <rect x="65" y="145" width="15" height="5" fill="#5DFFA3" />
+  <rect x="85" y="145" width="10" height="5" fill="#5DFFA3" />
+  <rect x="100" y="145" width="10" height="5" fill="#FF9E5E" />
+  <rect x="115" y="145" width="10" height="5" fill="#FF5E5E" />
+  <rect x="130" y="145" width="5" height="5" fill="#FF5E5E" />
+</svg> 

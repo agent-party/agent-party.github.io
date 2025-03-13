@@ -1,0 +1,194 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements -->
+  <rect x="0" y="0" width="800" height="600" fill="#F8F9FD" />
+  
+  <!-- Connection lines between agents -->
+  <line x1="400" y1="300" x2="200" y2="200" stroke="#4A6FFF" stroke-width="3" stroke-dasharray="5,5" />
+  <line x1="400" y1="300" x2="200" y2="400" stroke="#4A6FFF" stroke-width="3" stroke-dasharray="5,5" />
+  <line x1="400" y1="300" x2="600" y2="200" stroke="#4A6FFF" stroke-width="3" stroke-dasharray="5,5" />
+  <line x1="400" y1="300" x2="600" y2="400" stroke="#4A6FFF" stroke-width="3" stroke-dasharray="5,5" />
+  
+  <!-- Central hub -->
+  <circle cx="400" cy="300" r="80" fill="#2A325E" />
+  <text x="400" y="290" font-family="Poppins, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">Agent</text>
+  <text x="400" y="320" font-family="Poppins, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">Party</text>
+  
+  <!-- Decorative elements in central hub -->
+  <circle cx="400" cy="300" r="60" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,5" />
+  <circle cx="400" cy="300" r="40" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.5" />
+  
+  <!-- Agent: Doorman at top left -->
+  <g transform="translate(150, 150) scale(0.7)">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+    
+    <!-- Body - Door frame -->
+    <rect x="65" y="60" width="70" height="100" rx="5" ry="5" fill="#4A6FFF" />
+    
+    <!-- Door -->
+    <rect x="70" y="65" width="60" height="90" rx="3" ry="3" fill="#FFFFFF" />
+    
+    <!-- Door handle -->
+    <circle cx="120" cy="110" r="5" fill="#FFD700" />
+    
+    <!-- Face -->
+    <circle cx="100" cy="90" r="20" fill="#5DFFA3" />
+    
+    <!-- Eyes -->
+    <circle cx="90" cy="85" r="5" fill="#2A325E" />
+    <circle cx="110" cy="85" r="5" fill="#2A325E" />
+    
+    <!-- Security badge -->
+    <rect x="85" y="110" width="30" height="20" rx="3" ry="3" fill="#FF9E5E" />
+    <rect x="90" y="115" width="20" height="5" fill="#FFFFFF" />
+    <rect x="90" y="123" width="20" height="2" fill="#FFFFFF" />
+    
+    <!-- Mouth - happy secure smile -->
+    <path d="M90,95 Q100,105 110,95" fill="none" stroke="#2A325E" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <text x="200" y="250" font-family="Poppins, sans-serif" font-size="16" text-anchor="middle" fill="#2A325E" font-weight="bold">Doorman</text>
+  
+  <!-- Agent: DJ at top right -->
+  <g transform="translate(550, 150) scale(0.7)">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+    
+    <!-- DJ deck base -->
+    <rect x="55" y="90" width="90" height="60" rx="5" ry="5" fill="#2A325E" />
+    
+    <!-- Deck details -->
+    <rect x="60" y="95" width="80" height="50" rx="3" ry="3" fill="#444C7F" />
+    
+    <!-- Turntables -->
+    <circle cx="75" cy="120" r="15" fill="#5DFFA3" />
+    <circle cx="125" cy="120" r="15" fill="#5DFFA3" />
+    
+    <!-- Turntable centers -->
+    <circle cx="75" cy="120" r="5" fill="#2A325E" />
+    <circle cx="125" cy="120" r="5" fill="#2A325E" />
+    
+    <!-- Mixer controls -->
+    <rect x="95" y="105" width="10" height="30" rx="2" ry="2" fill="#FF9E5E" />
+    
+    <!-- DJ head/face (on top of the deck) -->
+    <circle cx="100" cy="75" r="20" fill="#4A6FFF" />
+    
+    <!-- Headphones -->
+    <path d="M80,75 C75,60 125,60 120,75" fill="none" stroke="#2A325E" stroke-width="5" />
+    <circle cx="80" cy="75" r="8" fill="#2A325E" />
+    <circle cx="120" cy="75" r="8" fill="#2A325E" />
+    
+    <!-- Eyes -->
+    <circle cx="90" cy="75" r="5" fill="#FFFFFF" />
+    <circle cx="110" cy="75" r="5" fill="#FFFFFF" />
+    <circle cx="90" cy="75" r="2" fill="#2A325E" />
+    <circle cx="110" cy="75" r="2" fill="#2A325E" />
+    
+    <!-- Mouth - cool DJ smile -->
+    <path d="M92,83 Q100,90 108,83" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <text x="600" y="250" font-family="Poppins, sans-serif" font-size="16" text-anchor="middle" fill="#2A325E" font-weight="bold">DJ</text>
+  
+  <!-- Agent: Bartender at bottom right -->
+  <g transform="translate(550, 350) scale(0.7)">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+    
+    <!-- Bar counter -->
+    <rect x="40" y="120" width="120" height="20" rx="3" ry="3" fill="#855E45" />
+    <rect x="40" y="120" width="120" height="8" rx="1" ry="1" fill="#9B7B5B" />
+    
+    <!-- Bartender body -->
+    <rect x="80" y="70" width="40" height="50" rx="15" ry="15" fill="#FF9E5E" />
+    
+    <!-- Bow tie -->
+    <rect x="95" y="70" width="10" height="5" fill="#2A325E" />
+    <polygon points="95,70 105,70 100,65" fill="#2A325E" />
+    <polygon points="95,75 105,75 100,80" fill="#2A325E" />
+    
+    <!-- Face -->
+    <circle cx="100" cy="55" r="20" fill="#FF9E5E" />
+    
+    <!-- Hair -->
+    <path d="M80,50 Q100,20 120,50" fill="#2A325E" />
+    
+    <!-- Eyes -->
+    <circle cx="90" cy="50" r="5" fill="#FFFFFF" />
+    <circle cx="110" cy="50" r="5" fill="#FFFFFF" />
+    <circle cx="90" cy="50" r="2" fill="#2A325E" />
+    <circle cx="110" cy="50" r="2" fill="#2A325E" />
+    
+    <!-- Smile -->
+    <path d="M90,60 Q100,70 110,60" fill="none" stroke="#2A325E" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Cocktail glass -->
+    <path d="M65,90 L55,120 L75,120 Z" fill="none" stroke="#4A6FFF" stroke-width="2" />
+    <rect x="63" y="120" width="4" height="10" fill="#4A6FFF" />
+  </g>
+  <text x="600" y="450" font-family="Poppins, sans-serif" font-size="16" text-anchor="middle" fill="#2A325E" font-weight="bold">Bartender</text>
+  
+  <!-- Agent: Talent Scout at bottom left -->
+  <g transform="translate(150, 350) scale(0.7)">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+    
+    <!-- Scout body -->
+    <rect x="85" y="80" width="30" height="70" rx="10" ry="10" fill="#5DFFA3" />
+    
+    <!-- Scout face -->
+    <circle cx="100" cy="60" r="20" fill="#5DFFA3" />
+    
+    <!-- Scout hat -->
+    <path d="M75,55 Q100,30 125,55" fill="#2A325E" />
+    <rect x="75" y="55" width="50" height="10" rx="5" ry="5" fill="#2A325E" />
+    
+    <!-- Badge on hat -->
+    <circle cx="100" cy="50" r="8" fill="#FFD700" />
+    <path d="M100,42 L102,48 L109,48 L103,52 L105,58 L100,54 L95,58 L97,52 L91,48 L98,48 Z" fill="#2A325E" />
+    
+    <!-- Scout eyes -->
+    <circle cx="90" cy="65" r="5" fill="#FFFFFF" />
+    <circle cx="110" cy="65" r="5" fill="#FFFFFF" />
+    <circle cx="90" cy="65" r="2" fill="#2A325E" />
+    <circle cx="110" cy="65" r="2" fill="#2A325E" />
+    
+    <!-- Scout smile -->
+    <path d="M90,75 Q100,85 110,75" fill="none" stroke="#2A325E" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <text x="200" y="450" font-family="Poppins, sans-serif" font-size="16" text-anchor="middle" fill="#2A325E" font-weight="bold">Talent Scout</text>
+  
+  <!-- Information Flow Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A6FFF" />
+    </marker>
+  </defs>
+  
+  <path d="M400,220 A120,120 0 0,1 480,300" fill="none" stroke="#4A6FFF" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M320,300 A120,120 0 0,1 400,380" fill="none" stroke="#4A6FFF" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M400,220 A120,120 0 0,0 320,300" fill="none" stroke="#4A6FFF" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M480,300 A120,120 0 0,0 400,380" fill="none" stroke="#4A6FFF" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Data/information exchange particles -->
+  <circle cx="360" cy="250" r="5" fill="#5DFFA3" />
+  <circle cx="450" cy="250" r="5" fill="#FF9E5E" />
+  <circle cx="360" cy="350" r="5" fill="#FFD700" />
+  <circle cx="450" cy="350" r="5" fill="#4A6FFF" />
+  
+  <!-- Task elements being processed -->
+  <rect x="370" y="240" width="20" height="10" rx="2" ry="2" fill="#FFFFFF" stroke="#2A325E" stroke-width="1" />
+  <rect x="430" y="340" width="20" height="10" rx="2" ry="2" fill="#FFFFFF" stroke="#2A325E" stroke-width="1" />
+  
+  <!-- Collaborative work product at center -->
+  <path d="M380,300 L385,290 L395,290 L400,280 L405,290 L415,290 L420,300 L415,310 L405,310 L400,320 L395,310 L385,310 Z" fill="#FFD700" fill-opacity="0.7" />
+  
+  <!-- Decorative elements -->
+  <circle cx="700" cy="100" r="30" fill="#5DFFA3" fill-opacity="0.2" />
+  <circle cx="720" cy="120" r="20" fill="#4A6FFF" fill-opacity="0.2" />
+  
+  <circle cx="100" cy="500" r="25" fill="#FF9E5E" fill-opacity="0.2" />
+  <circle cx="120" cy="520" r="15" fill="#2A325E" fill-opacity="0.2" />
+  
+  <!-- Title overlay -->
+  <text x="400" y="520" font-family="Poppins, sans-serif" font-size="28" text-anchor="middle" fill="#2A325E" font-weight="bold">Where AI Collaboration Comes Alive</text>
+</svg> 

@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<section class="hero section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">{{ page.hero_title }}</h1>
+            <p class="hero-subtitle">{{ page.hero_subtitle }}</p>
+            <div class="hero-buttons">
+                <a href="{{ page.primary_cta_url | relative_url }}" class="button primary-button">{{ page.primary_cta_text }}</a>
+                <a href="{{ page.secondary_cta_url | relative_url }}" class="button outline-button">{{ page.secondary_cta_text }}</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ page.hero_image | relative_url }}" alt="Agent Party">
+        </div>
+    </div>
+</section>
+
+<!-- Display development progress section -->
+<section class="sprint-status section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Development Progress</h2>
+            <p>Agent Party is being built iteratively with a focus on quality and community feedback. Track our progress as we build!</p>
+        </div>
+        
+        <div class="sprint-progress">
+            <div class="sprint-header">
+                <h3>Current Sprint: Foundation Components</h3>
+                <span class="dev-status in-progress">In Progress</span>
+            </div>
+            
+            <div class="sprint-meta">
+                <div class="sprint-meta-item">
+                    <i class="fas fa-calendar"></i> <span>Started: March 1, 2025</span>
+                </div>
+                <div class="sprint-meta-item">
+                    <i class="fas fa-flag-checkered"></i> <span>Target: March 31, 2025</span>
+                </div>
+                <div class="sprint-meta-item">
+                    <i class="fas fa-tasks"></i> <span>14 Tasks Remaining</span>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 35%;"></div>
+            </div>
+            <div class="progress-stats">
+                <span>35% Complete</span>
+                <span>View Details on <a href="https://github.com/agent-party/agent-party/projects">GitHub</a></span>
+            </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 2rem;">
+            <a href="{{ site.baseurl }}/sprints" class="button outline-button">View All Sprints</a>
+        </div>
+    </div>
+</section>
+
+{{ content }}
+
+{% include community_section.html %}
+
+<section id="agent-showcase" class="agent-showcase section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Meet The Agents</h2>
+            <p>Our specialized AI agents collaborate to form the perfect team for your needs</p>
+        </div>
+        
+        <div class="agent-grid">
+            {% for agent in site.data.agents %}
+            <div class="agent-card">
+                <div class="agent-avatar">
+                    {% include svg/{{ agent.svg_file }} %}
+                </div>
+                <h3>{{ agent.name }}</h3>
+                <h4>{{ agent.role }}</h4>
+                <p>{{ agent.description }}</p>
+                <a href="{{ site.baseurl }}/agents/{{ agent.slug }}" class="agent-link">Learn more</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="cta-section section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Explore Agent Party?</h2>
+            <p>Start your journey into the world of agent collaboration with our comprehensive guides and resources.</p>
+            <a href="{{ page.final_cta_url | relative_url }}" class="button primary-button">{{ page.final_cta_text }}</a>
+        </div>
+    </div>
+</section>
+
+<section id="get-started" class="get-started section bg-primary">
+    <div class="container">
+        <div class="section-header light">
+            <h2>Join the Party</h2>
+            <p>Whether you're a developer, organization, or AI enthusiast, Agent Party welcomes you.</p>
+        </div>
+        <div class="cta-container">
+            <a href="{{ page.final_cta_url | relative_url }}" class="button cta-button">{{ page.final_cta_text }}</a>
+        </div>
+    </div>
+</section>

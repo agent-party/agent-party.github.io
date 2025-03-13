@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="{{ site.baseurl }}/" class="logo">
+                <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="Agent Party Logo" class="logo-img">
+                <span>Agent Party</span>
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                {% for item in site.data.navigation %}
+                <li class="nav-item {% if page.url == item.url %}active{% endif %}">
+                    <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a href="{{ site.baseurl }}/getting-started" class="nav-link primary-button">Get Started</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header> 

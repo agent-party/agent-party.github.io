@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture - Agent Party</title>
+    <meta name="description" content="Where AI Collaboration Comes Alive - Transform isolated AI tools into collaborative teams that work together to solve your most complex challenges.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Architecture | Agent Party</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Architecture" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Where AI Collaboration Comes Alive - Transform isolated AI tools into collaborative teams that work together to solve your most complex challenges." />
+<meta property="og:description" content="Where AI Collaboration Comes Alive - Transform isolated AI tools into collaborative teams that work together to solve your most complex challenges." />
+<link rel="canonical" href="http://0.0.0.0:4000/architecture/" />
+<meta property="og:url" content="http://0.0.0.0:4000/architecture/" />
+<meta property="og:site_name" content="Agent Party" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Architecture" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Where AI Collaboration Comes Alive - Transform isolated AI tools into collaborative teams that work together to solve your most complex challenges.","headline":"Architecture","url":"http://0.0.0.0:4000/architecture/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <div class="site-container">
+        <header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="/assets/img/logo.svg" alt="Agent Party Logo" class="logo-img">
+                <span>Agent Party</span>
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                
+                <li class="nav-item ">
+                    <a href="/architecture" class="nav-link">Architecture</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a href="/agents" class="nav-link">Agents</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a href="/team-formation" class="nav-link">Team Formation</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a href="/capabilities" class="nav-link">Capabilities</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a href="/docs" class="nav-link">Documentation</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/getting-started" class="nav-link primary-button">Get Started</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header> 
+        
+        <main class="main-content">
+            <section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Architecture</h1>
+        
+        <p class="page-subtitle">The underlying infrastructure that powers the Agent Party platform</p>
+        
+    </div>
+</section>
+
+<section class="page-content">
+    <div class="container">
+        <div class="content-wrapper">
+            
+            <div class="page-toc">
+                <div class="toc-title">Contents</div>
+                <div class="toc-content" id="toc"></div>
+            </div>
+            
+            
+            <div class="main-content">
+                <h2 id="system-architecture-overview">System Architecture Overview</h2>
+
+<p>Agent Party is built on a modern, event-driven architecture designed for scalability, reliability, and extensibility. The system elegantly handles complex AI agent collaboration through a series of specialized layers.</p>
+
+<div class="architecture-diagram">
+  <img src="/assets/img/architecture-diagram.svg" alt="Agent Party Architecture Diagram" />
+</div>
+
+<h2 id="core-architectural-principles">Core Architectural Principles</h2>
+
+<p>Our architecture adheres to several key principles that enable seamless AI collaboration:</p>
+
+<h3 id="event-driven-communication">Event-Driven Communication</h3>
+
+<p>All system components communicate through standardized events, allowing for:</p>
+
+<ul>
+  <li><strong>Loose coupling</strong>: Components can evolve independently</li>
+  <li><strong>Asynchronous processing</strong>: Operations continue without blocking</li>
+  <li><strong>Scale-out capability</strong>: Horizontal scaling for increased load</li>
+  <li><strong>Replay and audit</strong>: Complete history of all system activities</li>
+</ul>
+
+<h3 id="zero-trust-security-model">Zero-Trust Security Model</h3>
+
+<p>Security is foundational in our architecture:</p>
+
+<ul>
+  <li><strong>End-to-end encryption</strong>: All data is encrypted in transit and at rest</li>
+  <li><strong>Fine-grained permissions</strong>: Access controls at the agent, team, and resource levels</li>
+  <li><strong>Continuous verification</strong>: All operations are verified regardless of origin</li>
+  <li><strong>Immutable audit log</strong>: Complete, tamper-proof record of all access and operations</li>
+</ul>
+
+<h3 id="polyglot-persistence">Polyglot Persistence</h3>
+
+<p>The right storage technology for each data type:</p>
+
+<ul>
+  <li><strong>Graph database</strong>: For complex agent relationships and capabilities</li>
+  <li><strong>Object storage</strong>: For large artifacts and model weights</li>
+  <li><strong>Key-value cache</strong>: For high-speed state and context management</li>
+</ul>
+
+<h2 id="architecture-layers-explained">Architecture Layers Explained</h2>
+
+<h3 id="agent-layer">Agent Layer</h3>
+
+<p>The Agent Layer represents the collection of specialized AI agents within the system. Each agent is purpose-built for specific functions:</p>
+
+<ul>
+  <li><strong>Doorman Agent</strong>: Controls access, authentication, and authorization</li>
+  <li><strong>DJ Agent</strong>: Orchestrates workflows and coordinates agent activities</li>
+  <li><strong>Bartender Agent</strong>: Provides the human interface for agent interactions</li>
+</ul>
+
+<p>Agents communicate via standardized event protocols and maintain their own state while sharing context when needed.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example agent initialization
+</span><span class="kn">from</span> <span class="n">agent_party</span> <span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">Capabilities</span>
+
+<span class="n">doorman</span> <span class="o">=</span> <span class="nc">Agent</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">doorman</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">capabilities</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">Capabilities</span><span class="p">.</span><span class="n">AUTHENTICATION</span><span class="p">,</span> 
+        <span class="n">Capabilities</span><span class="p">.</span><span class="n">AUTHORIZATION</span>
+    <span class="p">],</span>
+    <span class="n">connection</span><span class="o">=</span><span class="n">kafka_connection</span>
+<span class="p">)</span>
+
+<span class="c1"># Start the agent with its configuration
+</span><span class="n">doorman</span><span class="p">.</span><span class="nf">initialize</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="p">{</span>
+    <span class="sh">"</span><span class="s">security_level</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">enterprise</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">audit_log_enabled</span><span class="sh">"</span><span class="p">:</span> <span class="bp">True</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="event-bus-layer">Event Bus Layer</h3>
+
+<p>The Event Bus serves as the central nervous system of the platform:</p>
+
+<ul>
+  <li><strong>Topics</strong>: Segregated channels for different event types (requests, responses, broadcasts)</li>
+  <li><strong>Partitioning</strong>: Distributed processing for high throughput</li>
+  <li><strong>Ordering</strong>: Guaranteed message ordering when required</li>
+  <li><strong>Persistence</strong>: Configurable retention of event history</li>
+</ul>
+
+<p>All system components connect to the event bus, making it the single source of coordination.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example Kafka topic configuration</span>
+<span class="na">topics</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">agent.events</span>
+    <span class="na">partitions</span><span class="pi">:</span> <span class="m">12</span>
+    <span class="na">replication_factor</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">retention.ms</span><span class="pi">:</span> <span class="m">604800000</span>  <span class="c1"># 7 days</span>
+    
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">agent.requests</span>
+    <span class="na">partitions</span><span class="pi">:</span> <span class="m">24</span>
+    <span class="na">replication_factor</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">retention.ms</span><span class="pi">:</span> <span class="m">86400000</span>   <span class="c1"># 1 day</span>
+    
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">agent.responses</span>
+    <span class="na">partitions</span><span class="pi">:</span> <span class="m">24</span>
+    <span class="na">replication_factor</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">retention.ms</span><span class="pi">:</span> <span class="m">86400000</span>   <span class="c1"># 1 day</span>
+</code></pre></div></div>
+
+<h3 id="core-layer">Core Layer</h3>
+
+<p>The Core Layer provides essential services that support agent operations:</p>
+
+<h4 id="agent-registry">Agent Registry</h4>
+
+<p>The Agent Registry maintains the catalog of agent templates and instances:</p>
+
+<ul>
+  <li>Stores agent capabilities, relationships, and compatibility data</li>
+  <li>Tracks resource usage and performance metrics</li>
+  <li>Enables discovery of agents based on capabilities</li>
+  <li>Uses Neo4j for relationship modeling and Redis for quick lookups</li>
+</ul>
+
+<h4 id="event-processor">Event Processor</h4>
+
+<p>The Event Processor transforms and routes events between agents:</p>
+
+<ul>
+  <li>Applies transformations to match agent expectations</li>
+  <li>Enforces access control policies on event flow</li>
+  <li>Scales horizontally for high throughput scenarios</li>
+  <li>Built on Kafka Streams for stateful processing</li>
+</ul>
+
+<h4 id="state-manager">State Manager</h4>
+
+<p>The State Manager handles agent and task state:</p>
+
+<ul>
+  <li>Maintains context for long-running operations</li>
+  <li>Enables checkpointing and resumability</li>
+  <li>Provides consistent state access across components</li>
+  <li>Uses Redis for high-speed access and consistency</li>
+</ul>
+
+<h3 id="storage-layer">Storage Layer</h3>
+
+<p>The Storage Layer provides persistent storage optimized for different data types:</p>
+
+<h4 id="graph-database-neo4j">Graph Database (Neo4j)</h4>
+
+<p>Stores complex relationships between:</p>
+<ul>
+  <li>Agents and their capabilities</li>
+  <li>Team structures and collaboration patterns</li>
+  <li>Task histories and dependencies</li>
+</ul>
+
+<h4 id="object-storage-minio">Object Storage (MinIO)</h4>
+
+<p>Manages large binary data:</p>
+<ul>
+  <li>Model weights and artifacts</li>
+  <li>Document and media content</li>
+  <li>Task inputs and outputs</li>
+  <li>Content for vector embedding</li>
+</ul>
+
+<h4 id="cache-redis">Cache (Redis)</h4>
+
+<p>Provides high-speed access to:</p>
+<ul>
+  <li>Active agent contexts</li>
+  <li>Session data</li>
+  <li>Frequently accessed configuration</li>
+  <li>Temporary processing results</li>
+</ul>
+
+<h2 id="data-flow-patterns">Data Flow Patterns</h2>
+
+<h3 id="agent-collaboration-flow">Agent Collaboration Flow</h3>
+
+<ol>
+  <li><strong>Request Initiation</strong>: A request enters through the Bartender agent</li>
+  <li><strong>Authentication</strong>: Doorman verifies the request’s authorization</li>
+  <li><strong>Orchestration</strong>: DJ determines which agents should handle the request</li>
+  <li><strong>Execution</strong>: Selected agents process their portions of the task</li>
+  <li><strong>Synthesis</strong>: Results are combined and returned to the requestor</li>
+</ol>
+
+<h3 id="long-running-operation-flow">Long-running Operation Flow</h3>
+
+<ol>
+  <li><strong>Task Creation</strong>: System creates a persistent task record</li>
+  <li><strong>State Management</strong>: Task state is checkpointed throughout execution</li>
+  <li><strong>Progress Tracking</strong>: System provides real-time progress updates</li>
+  <li><strong>Result Handling</strong>: Completed results are stored and made available</li>
+  <li><strong>Notification</strong>: Interested parties are notified of completion</li>
+</ol>
+
+<h2 id="deployment-architecture">Deployment Architecture</h2>
+
+<p>Agent Party supports multiple deployment models to suit different organizational needs:</p>
+
+<h3 id="single-node-development">Single-Node Development</h3>
+
+<ul>
+  <li>All components run on a single machine</li>
+  <li>Perfect for development and testing</li>
+  <li>Uses Docker Compose for simple setup/teardown</li>
+</ul>
+
+<h3 id="kubernetes-production">Kubernetes Production</h3>
+
+<ul>
+  <li>Horizontally scalable deployment</li>
+  <li>Auto-scaling based on workload</li>
+  <li>High availability configuration</li>
+  <li>Helm charts for consistent deployment</li>
+</ul>
+
+<h3 id="hybrid-cloudon-premise">Hybrid Cloud/On-Premise</h3>
+
+<ul>
+  <li>Core components deployed on-premise</li>
+  <li>Burst capacity in cloud environments</li>
+  <li>Secure connection between environments</li>
+  <li>Data residency controls for sensitive information</li>
+</ul>
+
+<h2 id="scalability-considerations">Scalability Considerations</h2>
+
+<p>The architecture is designed to scale both horizontally and vertically:</p>
+
+<ul>
+  <li><strong>Component Scaling</strong>: Each component scales independently</li>
+  <li><strong>Kafka Partitioning</strong>: Distributes processing across nodes</li>
+  <li><strong>Stateless Design</strong>: Most components maintain minimal state</li>
+  <li><strong>Read Replicas</strong>: Distribute database read load</li>
+  <li><strong>Caching Tiers</strong>: Multi-level caching reduces database pressure</li>
+</ul>
+
+<h2 id="business-benefits">Business Benefits</h2>
+
+<h3 id="cost-efficiency">Cost Efficiency</h3>
+
+<ul>
+  <li><strong>Pay-as-you-grow</strong>: Scale resources according to actual usage</li>
+  <li><strong>Resource Optimization</strong>: Components scale independently</li>
+  <li><strong>Reduced Integration Costs</strong>: Standardized interfaces simplify onboarding new tools</li>
+</ul>
+
+<h3 id="operational-excellence">Operational Excellence</h3>
+
+<ul>
+  <li><strong>High Availability</strong>: No single points of failure</li>
+  <li><strong>Observable</strong>: Comprehensive metrics, logging, and tracing</li>
+  <li><strong>Self-healing</strong>: Automated recovery from component failures</li>
+  <li><strong>Upgradable</strong>: Rolling updates without system downtime</li>
+</ul>
+
+<h3 id="future-proof-investment">Future-Proof Investment</h3>
+
+<ul>
+  <li><strong>Modular Design</strong>: Components can be replaced individually</li>
+  <li><strong>Standards-Based</strong>: Built on proven, open technologies</li>
+  <li><strong>Vendor Neutral</strong>: Avoid lock-in to specific AI providers</li>
+  <li><strong>Extensible</strong>: New agents and capabilities can be added seamlessly</li>
+</ul>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Ready to learn more about implementing Agent Party in your environment?</p>
+
+<div class="cta-container">
+  <a href="/getting-started" class="button primary-button">View Getting Started Guide</a>
+  <a href="/docs" class="button secondary-button">Explore Documentation</a>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section> 
+        </main>
+        
+        <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <img src="/assets/img/logo.svg" alt="Agent Party Logo">
+                    <span>Agent Party</span>
+                </a>
+                <p>The enterprise platform where AI collaboration comes alive.</p>
+                <div class="social-links">
+                    <a href="https://github.com/agent-party" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/agentparty" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/company/agent-party" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://discord.gg/agentparty" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/docs">Documentation</a></li>
+                    <li><a href="https://github.com/agent-party">GitHub Repository</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/showcase">Showcase</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="/architecture">Architecture</a></li>
+                    <li><a href="/agents">Agents</a></li>
+                    <li><a href="/team-formation">Team Formation</a></li>
+                    <li><a href="/capabilities">Capabilities</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Agent Party. All rights reserved.</p>
+        </div>
+    </div>
+</footer> 
+    </div>
+    
+    <!-- JavaScript files -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html> 

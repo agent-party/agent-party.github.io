@@ -1,0 +1,59 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+  
+  <!-- Bar counter -->
+  <rect x="40" y="120" width="120" height="20" rx="3" ry="3" fill="#855E45" />
+  <rect x="40" y="120" width="120" height="8" rx="1" ry="1" fill="#9B7B5B" />
+  
+  <!-- Bartender body -->
+  <rect x="80" y="70" width="40" height="50" rx="15" ry="15" fill="#FF9E5E" />
+  
+  <!-- Bow tie -->
+  <rect x="95" y="70" width="10" height="5" fill="#2A325E" />
+  <polygon points="95,70 105,70 100,65" fill="#2A325E" />
+  <polygon points="95,75 105,75 100,80" fill="#2A325E" />
+  
+  <!-- Face -->
+  <circle cx="100" cy="55" r="20" fill="#FF9E5E" />
+  
+  <!-- Hair -->
+  <path d="M80,50 Q100,20 120,50" fill="#2A325E" />
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="50" r="5" fill="#FFFFFF" />
+  <circle cx="110" cy="50" r="5" fill="#FFFFFF" />
+  <circle cx="90" cy="50" r="2" fill="#2A325E" />
+  <circle cx="110" cy="50" r="2" fill="#2A325E" />
+  
+  <!-- Smile -->
+  <path d="M90,60 Q100,70 110,60" fill="none" stroke="#2A325E" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Cocktail glass -->
+  <path d="M65,90 L55,120 L75,120 Z" fill="none" stroke="#4A6FFF" stroke-width="2" />
+  <rect x="63" y="120" width="4" height="10" fill="#4A6FFF" />
+  <circle cx="65" cy="95" r="2" fill="#FF5E5E" />
+  <path d="M60,105 L70,105" stroke="#4A6FFF" stroke-width="1" />
+  
+  <!-- Martini glass -->
+  <path d="M135,90 L125,110 L145,110 Z" fill="none" stroke="#4A6FFF" stroke-width="2" />
+  <rect x="133" y="110" width="4" height="10" fill="#4A6FFF" />
+  <circle cx="135" cy="95" r="3" fill="#5DFFA3" />
+  <circle cx="140" cy="98" r="2" fill="#5DFFA3" />
+  
+  <!-- Shaker -->
+  <path d="M95,100 L90,110 L100,110 Z" fill="#DDDDDD" />
+  <rect x="90" y="90" width="10" height="10" rx="1" ry="1" fill="#DDDDDD" />
+  <rect x="92" y="85" width="6" height="5" rx="1" ry="1" fill="#BBBBBB" />
+  
+  <!-- Chat bubble / Interface elements -->
+  <path d="M130,70 Q150,70 150,55 Q150,40 130,40 Q110,40 110,55 Q110,70 130,70 Z" fill="#FFFFFF" stroke="#4A6FFF" stroke-width="2" />
+  <circle cx="120" cy="55" r="3" fill="#4A6FFF" />
+  <circle cx="130" cy="55" r="3" fill="#4A6FFF" />
+  <circle cx="140" cy="55" r="3" fill="#4A6FFF" />
+  
+  <!-- Bottles on shelf -->
+  <rect x="50" y="30" width="8" height="15" fill="#5DFFA3" />
+  <rect x="62" y="25" width="8" height="20" fill="#FF9E5E" />
+  <rect x="74" y="28" width="8" height="17" fill="#4A6FFF" />
+</svg> 

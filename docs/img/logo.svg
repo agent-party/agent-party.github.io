@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Party Hat -->
+  <path d="M100 20L140 100H60L100 20Z" fill="#FF9E5E" stroke="#2A325E" stroke-width="4"/>
+
+  <!-- Star decoration on party hat -->
+  <circle cx="110" cy="60" r="8" fill="#5DFFA3"/>
+  <circle cx="85" cy="75" r="6" fill="#4A6FFF"/>
+
+  <!-- Party Streamers -->
+  <path d="M60 100C40 120 30 150 20 180" stroke="#4A6FFF" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
+  <path d="M140 100C160 120 170 150 180 180" stroke="#FF9E5E" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
+
+  <!-- AI Agent Circle -->
+  <circle cx="100" cy="130" r="40" fill="#4A6FFF" stroke="#2A325E" stroke-width="4"/>
+
+  <!-- Agent Party Text -->
+  <path d="M70 130L85 115M85 115L100 130M85 115L85 145" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M115 115V145M105 115H125" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

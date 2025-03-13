@@ -1,0 +1,15 @@
+# Main navigation items
+- title: Architecture
+  url: /architecture
+  
+- title: Agents
+  url: /agents
+  
+- title: Team Formation
+  url: /team-formation
+  
+- title: Capabilities
+  url: /capabilities
+  
+- title: Documentation
+  url: /docs 

@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<article class="post">
+    <div class="post-header">
+        <div class="container">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-meta">
+                {% if page.author %}
+                <span class="post-author">By {{ page.author }}</span>
+                {% endif %}
+                <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+                {% if page.categories.size > 0 %}
+                <span class="post-categories">
+                    {% for category in page.categories %}
+                    <a href="{{ site.baseurl }}/blog/categories/{{ category | slugify }}" class="post-category">{{ category }}</a>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    {% if page.featured_image %}
+    <div class="post-featured-image">
+        <div class="container">
+            <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
+        </div>
+    </div>
+    {% endif %}
+    
+    <div class="post-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="main-content">
+                    {{ content }}
+                    
+                    <div class="post-footer">
+                        <div class="post-share">
+                            <h4>Share this post</h4>
+                            <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | relative_url }}" target="_blank" class="share-button twitter">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | relative_url }}&title={{ page.title | url_encode }}" target="_blank" class="share-button linkedin">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this article: {{ site.url }}{{ page.url | relative_url }}" class="share-button email">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </div>
+                        
+                        {% if site.related_posts.size > 0 %}
+                        <div class="related-posts">
+                            <h4>Related Posts</h4>
+                            <div class="related-posts-grid">
+                                {% for post in site.related_posts limit:3 %}
+                                <a href="{{ post.url | relative_url }}" class="related-post-card">
+                                    <h5>{{ post.title }}</h5>
+                                    <span class="related-post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <aside class="post-sidebar">
+                    <div class="sidebar-widget author-widget">
+                        <h4>About the Author</h4>
+                        {% if page.author_bio %}
+                        <p>{{ page.author_bio }}</p>
+                        {% else %}
+                        <p>The Agent Party team is building the future of AI collaboration, bringing together specialized agents to solve complex problems.</p>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h4>Recent Posts</h4>
+                        <ul class="recent-posts">
+                            {% for post in site.posts limit:5 %}
+                            <li>
+                                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h4>Categories</h4>
+                        <div class="category-list">
+                            {% assign categories = site.categories | sort %}
+                            {% for category in categories %}
+                            <a href="{{ site.baseurl }}/blog/categories/{{ category[0] | slugify }}" class="category-tag">
+                                {{ category[0] }} ({{ category[1].size }})
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget cta-widget">
+                        <h4>Try Agent Party Today</h4>
+                        <p>Experience the power of AI collaboration with our free Community Edition.</p>
+                        <a href="{{ site.baseurl }}/getting-started" class="button primary-button">Get Started</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</article> 

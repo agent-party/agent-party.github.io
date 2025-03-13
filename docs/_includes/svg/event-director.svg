@@ -1,0 +1,68 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+  
+  <!-- Director body -->
+  <rect x="85" y="70" width="30" height="80" rx="10" ry="10" fill="#4A6FFF" />
+  
+  <!-- Director face -->
+  <circle cx="100" cy="50" r="20" fill="#4A6FFF" />
+  
+  <!-- Director's cap -->
+  <path d="M80,40 L120,40 L120,50 L80,50 Z" fill="#2A325E" />
+  <ellipse cx="100" cy="40" rx="20" ry="5" fill="#2A325E" />
+  
+  <!-- Director eyes -->
+  <circle cx="90" cy="50" r="5" fill="#FFFFFF" />
+  <circle cx="110" cy="50" r="5" fill="#FFFFFF" />
+  <circle cx="90" cy="50" r="2" fill="#2A325E" />
+  <circle cx="110" cy="50" r="2" fill="#2A325E" />
+  
+  <!-- Director expression - focused/determined -->
+  <path d="M90,60 L110,60" fill="none" stroke="#2A325E" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Megaphone (for directing) -->
+  <path d="M115,75 L140,65 L140,85 L115,75 Z" fill="#FF9E5E" />
+  <rect x="105" y="70" width="10" height="10" rx="2" ry="2" fill="#FF9E5E" />
+  
+  <!-- Sound waves from megaphone -->
+  <path d="M145,75 Q155,70 145,65" fill="none" stroke="#FF9E5E" stroke-width="2" stroke-linecap="round" />
+  <path d="M150,75 Q165,65 150,55" fill="none" stroke="#FF9E5E" stroke-width="2" stroke-linecap="round" />
+  <path d="M155,75 Q175,60 155,45" fill="none" stroke="#FF9E5E" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Clipboard with schedule -->
+  <rect x="50" y="80" width="25" height="35" rx="2" ry="2" fill="#F5F5F5" stroke="#2A325E" stroke-width="1" />
+  <rect x="50" y="80" width="25" height="7" rx="2" ry="2" fill="#FF9E5E" />
+  <line x1="55" y1="95" x2="70" y2="95" stroke="#2A325E" stroke-width="1" />
+  <line x1="55" y1="100" x2="70" y2="100" stroke="#2A325E" stroke-width="1" />
+  <line x1="55" y1="105" x2="70" y2="105" stroke="#2A325E" stroke-width="1" />
+  <line x1="55" y1="110" x2="65" y2="110" stroke="#2A325E" stroke-width="1" />
+  
+  <!-- Dashboard/Control panel -->
+  <rect x="40" y="130" width="120" height="30" rx="5" ry="5" fill="#2A325E" />
+  
+  <!-- Control panel elements -->
+  <circle cx="55" cy="145" r="5" fill="#FF5E5E" />
+  <circle cx="75" cy="145" r="5" fill="#5DFFA3" />
+  <circle cx="95" cy="145" r="5" fill="#FFD700" />
+  <rect x="110" y="140" width="40" height="10" rx="2" ry="2" fill="#444C7F" />
+  <rect x="115" y="142" width="30" height="6" rx="1" ry="1" fill="#5DFFA3" />
+  
+  <!-- System monitoring screens -->
+  <rect x="130" y="90" width="30" height="20" rx="2" ry="2" fill="#2A325E" />
+  <rect x="132" y="92" width="26" height="16" rx="1" ry="1" fill="#1A2040" />
+  
+  <!-- Activity graph on screen -->
+  <polyline points="135,105 140,100 145,102 150,95 155,98" fill="none" stroke="#5DFFA3" stroke-width="1" />
+  
+  <!-- Connection lines (monitoring various systems) -->
+  <line x1="130" y1="110" x2="120" y2="130" stroke="#4A6FFF" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="145" y1="110" x2="145" y2="130" stroke="#4A6FFF" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="160" y1="110" x2="170" y2="130" stroke="#4A6FFF" stroke-width="1" stroke-dasharray="2,2" />
+  
+  <!-- Event icons -->
+  <circle cx="45" cy="40" r="5" fill="#FF9E5E" />
+  <circle cx="60" cy="30" r="5" fill="#5DFFA3" />
+  <circle cx="140" cy="40" r="5" fill="#FF9E5E" />
+  <circle cx="155" cy="30" r="5" fill="#5DFFA3" />
+</svg> 

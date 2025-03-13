@@ -1,0 +1,35 @@
+# Agent definitions
+- name: Doorman
+  role: Trust & Access Control
+  description: The secure gateway managing identity, permissions, and trust throughout the platform.
+  svg_file: doorman.svg
+  slug: doorman
+  business_value: Reduce security risks by 70% with zero-trust architecture and fine-grained access controls.
+
+- name: DJ
+  role: Intelligent Orchestration
+  description: The coordination engine that routes requests, manages workflows, and ensures all agents work together efficiently.
+  svg_file: dj.svg
+  slug: dj
+  business_value: Eliminate 80% of process management overhead with automated coordination of complex AI tasks.
+
+- name: Bartender
+  role: Your Personal Interface
+  description: The human-facing layer that makes AI collaboration intuitive and productive.
+  svg_file: bartender.svg
+  slug: bartender
+  business_value: Boost user adoption by 65% with an intuitive interface that feels like talking to a collaborative team.
+
+- name: Talent Scout
+  role: Agent Creation & Customization
+  description: The agent lifecycle manager for creating and configuring specialized AI agents.
+  svg_file: talent-scout.svg
+  slug: talent-scout
+  business_value: Reduce time-to-deployment by 90% for new AI capabilities through standardized agent creation.
+
+- name: Event Director
+  role: System Management
+  description: The administrative control plane for monitoring and managing the entire platform.
+  svg_file: event-director.svg
+  slug: event-director
+  business_value: Increase operational visibility by 100% with comprehensive dashboards and proactive alerts. 

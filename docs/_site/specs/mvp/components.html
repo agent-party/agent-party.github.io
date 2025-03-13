@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Party MVP - Component Specification</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4A6FFF;
+            --secondary: #FF9E5E;
+            --tertiary: #5DFFA3;
+            --dark: #2A325E;
+            --light: #F8F9FD;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        .navbar {
+            background-color: var(--dark);
+        }
+        .navbar-brand {
+            color: white;
+            font-weight: 700;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+        }
+        .component-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .component-icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: var(--light);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .implementation-detail {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            color: var(--primary);
+            background-color: #f1f5f9;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .api-table td, .api-table th {
+            padding: 12px 15px;
+        }
+        .interface-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .integration-diagram {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-robot me-2"></i>Agent Party MVP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="components.html">Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schemas.html">Schemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testing.html">Testing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="section-title">Component Specification</h1>
+                <p class="lead mb-5">
+                    This document details the core components of the Agent Party MVP, their interfaces, and how they integrate to form a cohesive system.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="kafka" class="section">
+        <div class="container">
+            <h2 class="mb-4"><i class="fas fa-exchange-alt text-primary me-2"></i>Kafka: Event Messaging System</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Core Functionality</h3>
+                        <p>Kafka serves as the central nervous system of the Agent Party platform, handling all event-based communication between agents and system components.</p>
+
+                        <h4 class="mt-4">Responsibilities</h4>
+                        <ul>
+                            <li>Provide reliable message delivery with exactly-once semantics</li>
+                            <li>Enable real-time event streaming between components</li>
+                            <li>Support topic-based message routing</li>
+                            <li>Maintain message ordering within partitions</li>
+                            <li>Provide message persistence with configurable retention</li>
+                        </ul>
+
+                        <h4 class="mt-4">Topic Structure</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Purpose</th>
+                                    <th>Partitions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>agent.registration</code></td>
+                                    <td>Agent registration events</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td><code>agent.events</code></td>
+                                    <td>General purpose agent events</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td><code>agent.requests</code></td>
+                                    <td>Service requests from agents</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td><code>agent.responses</code></td>
+                                    <td>Service responses to agents</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td><code>system.logs</code></td>
+                                    <td>System logging and monitoring</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Implementation Details</h3>
+
+                        <div class="implementation-detail">
+                            <h4>Configuration</h4>
+                            <ul>
+                                <li>3 broker cluster for fault tolerance</li>
+                                <li>Zookeeper ensemble for coordination</li>
+                                <li>Replication factor: 3</li>
+                                <li>Min in-sync replicas: 2</li>
+                                <li>Default retention: 7 days</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="mt-4">Producer Configuration</h4>
+                        <pre><code>bootstrap.servers=kafka:9092
+acks=all
+retries=10
+batch.size=16384
+linger.ms=5
+key.serializer=org.apache.kafka.common.serialization.StringSerializer
+value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer
+schema.registry.url=http://schema-registry:8081
+</code></pre>
+
+                        <h4 class="mt-4">Consumer Configuration</h4>
+                        <pre><code>bootstrap.servers=kafka:9092
+group.id=agent-party-service
+enable.auto.commit=false
+auto.offset.reset=earliest
+key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
+value.deserializer=io.confluent.kafka.serializers.KafkaAvroDeserializer
+schema.registry.url=http://schema-registry:8081
+</code></pre>
+
+                        <h4 class="mt-4">Integration Points</h4>
+                        <ul>
+                            <li>All agents connect as producers and consumers</li>
+                            <li>System services use Kafka Streams for event processing</li>
+                            <li>Schema Registry ensures schema compatibility</li>
+                            <li>Agent Registry consumes registration events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="neo4j" class="section bg-light">
+        <div class="container">
+            <h2 class="mb-4"><i class="fas fa-project-diagram text-primary me-2"></i>Neo4j: Graph Database</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Core Functionality</h3>
+                        <p>Neo4j provides the graph database infrastructure for modeling agent relationships, capabilities, and interaction patterns.</p>
+
+                        <h4 class="mt-4">Responsibilities</h4>
+                        <ul>
+                            <li>Store agent profiles and metadata</li>
+                            <li>Model relationships between agents</li>
+                            <li>Track agent capabilities and services</li>
+                            <li>Support graph queries for agent discovery</li>
+                            <li>Maintain interaction history between agents</li>
+                        </ul>
+
+                        <h4 class="mt-4">Node Types</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Node Label</th>
+                                    <th>Purpose</th>
+                                    <th>Key Properties</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>Agent</code></td>
+                                    <td>Represents an agent in the system</td>
+                                    <td>id, name, type, status</td>
+                                </tr>
+                                <tr>
+                                    <td><code>Capability</code></td>
+                                    <td>Represents a capability an agent can provide</td>
+                                    <td>id, name, description</td>
+                                </tr>
+                                <tr>
+                                    <td><code>Resource</code></td>
+                                    <td>External resource an agent can access</td>
+                                    <td>id, type, location</td>
+                                </tr>
+                                <tr>
+                                    <td><code>Event</code></td>
+                                    <td>Represents a significant system event</td>
+                                    <td>id, type, timestamp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-4">Relationship Types</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Relationship</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>:HAS_CAPABILITY</code></td>
+                                    <td>Links an Agent to a Capability it provides</td>
+                                </tr>
+                                <tr>
+                                    <td><code>:DEPENDS_ON</code></td>
+                                    <td>Indicates an Agent depends on another Agent</td>
+                                </tr>
+                                <tr>
+                                    <td><code>:ACCESSES</code></td>
+                                    <td>Links an Agent to Resources it can access</td>
+                                </tr>
+                                <tr>
+                                    <td><code>:PARTICIPATED_IN</code></td>
+                                    <td>Links an Agent to Events it participated in</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Implementation Details</h3>
+
+                        <div class="implementation-detail">
+                            <h4>Configuration</h4>
+                            <ul>
+                                <li>Single node setup for MVP (clustered in production)</li>
+                                <li>Authentication enabled</li>
+                                <li>HTTPS for encrypted communication</li>
+                                <li>Regular backup schedule</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="mt-4">Sample Cypher Queries</h4>
+                        <h5>Register New Agent</h5>
+                        <pre><code>CREATE (a:Agent {
+  id: $agentId,
+  name: $name,
+  type: $type,
+  status: 'ACTIVE',
+  created: datetime()
+})
+RETURN a</code></pre>
+
+                        <h5>Find Agents by Capability</h5>
+                        <pre><code>MATCH (a:Agent)-[:HAS_CAPABILITY]->(c:Capability)
+WHERE c.name = $capabilityName
+RETURN a.id, a.name, a.type</code></pre>
+
+                        <h5>Find Path Between Agents</h5>
+                        <pre><code>MATCH path = shortestPath(
+  (a:Agent {id: $sourceId})-[*]-(b:Agent {id: $targetId})
+)
+RETURN path</code></pre>
+
+                        <h4 class="mt-4">Integration Points</h4>
+                        <ul>
+                            <li>Agent Registry service interfaces with Neo4j</li>
+                            <li>Event Processor updates relationship data</li>
+                            <li>Redis caches frequent graph queries</li>
+                            <li>GraphQL API exposes graph data to agents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="minio" class="section">
+        <div class="container">
+            <h2 class="mb-4"><i class="fas fa-database text-primary me-2"></i>MinIO: Object Storage</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Core Functionality</h3>
+                        <p>MinIO provides S3-compatible object storage for artifacts, file attachments, and binary data generated or consumed by agents.</p>
+
+                        <h4 class="mt-4">Responsibilities</h4>
+                        <ul>
+                            <li>Store binary artifacts and file objects</li>
+                            <li>Provide secure access to stored objects</li>
+                            <li>Support object versioning and lifecycle policies</li>
+                            <li>Enable efficient object retrieval by unique IDs</li>
+                            <li>Support metadata tagging for objects</li>
+                        </ul>
+
+                        <h4 class="mt-4">Bucket Structure</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Bucket</th>
+                                    <th>Purpose</th>
+                                    <th>Access Pattern</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>agent-resources</code></td>
+                                    <td>Resources provided by or for agents</td>
+                                    <td>Read-heavy</td>
+                                </tr>
+                                <tr>
+                                    <td><code>agent-artifacts</code></td>
+                                    <td>Artifacts generated by agent interactions</td>
+                                    <td>Write-then-read</td>
+                                </tr>
+                                <tr>
+                                    <td><code>system-logs</code></td>
+                                    <td>System logging data</td>
+                                    <td>Write-heavy</td>
+                                </tr>
+                                <tr>
+                                    <td><code>temp-storage</code></td>
+                                    <td>Temporary object storage with expiration</td>
+                                    <td>Mixed, short-lived</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Implementation Details</h3>
+
+                        <div class="implementation-detail">
+                            <h4>Configuration</h4>
+                            <ul>
+                                <li>4-node distributed setup</li>
+                                <li>Erasure coding for data protection</li>
+                                <li>TLS encryption for data in transit</li>
+                                <li>Object locking for compliance</li>
+                                <li>IAM policies for access control</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="mt-4">Object Naming Convention</h4>
+                        <pre><code>/{agent-id}/{object-type}/{uuid}</code></pre>
+
+                        <h4 class="mt-4">Required Metadata</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Metadata Field</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>agent-id</code></td>
+                                    <td>ID of the agent that owns or created the object</td>
+                                </tr>
+                                <tr>
+                                    <td><code>content-type</code></td>
+                                    <td>MIME type of the stored object</td>
+                                </tr>
+                                <tr>
+                                    <td><code>created-at</code></td>
+                                    <td>Timestamp when the object was created</td>
+                                </tr>
+                                <tr>
+                                    <td><code>source-event</code></td>
+                                    <td>Event ID that triggered object creation (if applicable)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-4">Integration Points</h4>
+                        <ul>
+                            <li>REST API for direct object operations</li>
+                            <li>Presigned URLs for secure, time-limited access</li>
+                            <li>Event notifications to Kafka on object changes</li>
+                            <li>Neo4j stores object references, not the objects themselves</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="redis" class="section bg-light">
+        <div class="container">
+            <h2 class="mb-4"><i class="fas fa-bolt text-primary me-2"></i>Redis: Caching & Real-time State</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Core Functionality</h3>
+                        <p>Redis provides in-memory data storage for caching, session management, real-time state tracking, and high-speed lookups.</p>
+
+                        <h4 class="mt-4">Responsibilities</h4>
+                        <ul>
+                            <li>Cache frequently accessed data from Neo4j</li>
+                            <li>Maintain real-time agent status</li>
+                            <li>Support distributed locking for concurrency control</li>
+                            <li>Enable temporary storage of session data</li>
+                            <li>Provide pub/sub capabilities for live updates</li>
+                        </ul>
+
+                        <h4 class="mt-4">Data Structures</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Data Type</th>
+                                    <th>Use Case</th>
+                                    <th>Key Pattern</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hash</td>
+                                    <td>Agent profiles and metadata</td>
+                                    <td><code>agent:{id}</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Set</td>
+                                    <td>Agent capabilities</td>
+                                    <td><code>agent:{id}:capabilities</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Sorted Set</td>
+                                    <td>Agent ranking by activity</td>
+                                    <td><code>agents:activity</code></td>
+                                </tr>
+                                <tr>
+                                    <td>List</td>
+                                    <td>Recent events per agent</td>
+                                    <td><code>agent:{id}:recent-events</code></td>
+                                </tr>
+                                <tr>
+                                    <td>String</td>
+                                    <td>Configuration values</td>
+                                    <td><code>config:{key}</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="component-card">
+                        <h3>Implementation Details</h3>
+
+                        <div class="implementation-detail">
+                            <h4>Configuration</h4>
+                            <ul>
+                                <li>Redis Sentinel for high availability</li>
+                                <li>Password authentication</li>
+                                <li>Snapshotting + AOF for persistence</li>
+                                <li>Memory limit with LRU eviction</li>
+                                <li>Keyspace notifications enabled</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="mt-4">Cache Expiration Strategy</h4>
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Data Category</th>
+                                    <th>TTL</th>
+                                    <th>Invalidation Strategy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Agent Profiles</td>
+                                    <td>30 minutes</td>
+                                    <td>Active invalidation on update</td>
+                                </tr>
+                                <tr>
+                                    <td>Capability Data</td>
+                                    <td>1 hour</td>
+                                    <td>Active invalidation on update</td>
+                                </tr>
+                                <tr>
+                                    <td>Session Data</td>
+                                    <td>15 minutes</td>
+                                    <td>TTL-based expiration with refresh</td>
+                                </tr>
+                                <tr>
+                                    <td>Configuration</td>
+                                    <td>12 hours</td>
+                                    <td>Active invalidation on update</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-4">Pub/Sub Channels</h4>
+                        <pre><code>agent-status         # Agent status changes
+agent-events         # Notable agent events
+system-notifications # System-wide notifications
+</code></pre>
+
+                        <h4 class="mt-4">Integration Points</h4>
+                        <ul>
+                            <li>Agent Registry uses Redis for fast lookups</li>
+                            <li>Neo4j query results cached in Redis</li>
+                            <li>Event Processor publishes updates to Redis channels</li>
+                            <li>System services use Redis for distributed locking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-dark text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">Agent Party MVP Specification © 2025</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

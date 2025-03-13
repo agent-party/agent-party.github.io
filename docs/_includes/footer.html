@@ -1,0 +1,49 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="{{ site.baseurl }}/" class="footer-logo">
+                    <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="Agent Party Logo">
+                    <span>Agent Party</span>
+                </a>
+                <p>The enterprise platform where AI collaboration comes alive.</p>
+                <div class="social-links">
+                    <a href="https://github.com/agent-party" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/agentparty" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/company/agent-party" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://discord.gg/agentparty" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="{{ '/docs' | relative_url }}">Documentation</a></li>
+                    <li><a href="https://github.com/agent-party">GitHub Repository</a></li>
+                    <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                    <li><a href="{{ '/showcase' | relative_url }}">Showcase</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="{{ '/architecture' | relative_url }}">Architecture</a></li>
+                    <li><a href="{{ '/agents' | relative_url }}">Agents</a></li>
+                    <li><a href="{{ '/team-formation' | relative_url }}">Team Formation</a></li>
+                    <li><a href="{{ '/capabilities' | relative_url }}">Capabilities</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="{{ '/about' | relative_url }}">About Us</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                    <li><a href="{{ '/terms' | relative_url }}">Terms of Service</a></li>
+                    <li><a href="{{ '/privacy' | relative_url }}">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {% if site.time %}{{ site.time | date: '%Y' }}{% else %}2025{% endif %} Agent Party. All rights reserved.</p>
+        </div>
+    </div>
+</footer> 

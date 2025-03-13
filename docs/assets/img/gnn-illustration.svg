@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Graph Nodes -->
+  <!-- Agent Nodes -->
+  <circle cx="400" cy="250" r="50" fill="#6c5ce7" opacity="0.9"/>
+  <circle cx="250" cy="150" r="35" fill="#6c5ce7" opacity="0.8"/>
+  <circle cx="550" cy="150" r="35" fill="#6c5ce7" opacity="0.8"/>
+  <circle cx="200" cy="300" r="30" fill="#6c5ce7" opacity="0.7"/>
+  <circle cx="600" cy="300" r="30" fill="#6c5ce7" opacity="0.7"/>
+  <circle cx="350" cy="400" r="25" fill="#6c5ce7" opacity="0.7"/>
+  <circle cx="450" cy="400" r="25" fill="#6c5ce7" opacity="0.7"/>
+  
+  <!-- Capability Nodes -->
+  <rect x="300" y="100" width="50" height="50" rx="10" ry="10" fill="#00b894" opacity="0.8"/>
+  <rect x="450" y="100" width="50" height="50" rx="10" ry="10" fill="#00b894" opacity="0.8"/>
+  <rect x="130" cy="220" width="40" height="40" rx="8" ry="8" fill="#00b894" opacity="0.7"/>
+  <rect x="630" cy="220" width="40" height="40" rx="8" ry="8" fill="#00b894" opacity="0.7"/>
+  <rect x="250" cy="350" width="40" height="40" rx="8" ry="8" fill="#00b894" opacity="0.7"/>
+  <rect x="510" cy="350" width="40" height="40" rx="8" ry="8" fill="#00b894" opacity="0.7"/>
+  
+  <!-- Task Node -->
+  <polygon points="400,50 430,80 400,110 370,80" fill="#fd79a8" opacity="0.9"/>
+  
+  <!-- Connections -->
+  <!-- Agent to Agent connections -->
+  <line x1="400" y1="250" x2="250" y2="150" stroke="#a29bfe" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="250" x2="550" y2="150" stroke="#a29bfe" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="250" x2="200" y2="300" stroke="#a29bfe" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="250" x2="600" y2="300" stroke="#a29bfe" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="250" x2="350" y2="400" stroke="#a29bfe" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="250" x2="450" y2="400" stroke="#a29bfe" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Agent to Capability connections -->
+  <line x1="250" y1="150" x2="300" y2="100" stroke="#55efc4" stroke-width="2" opacity="0.6"/>
+  <line x1="550" y1="150" x2="450" y2="100" stroke="#55efc4" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="300" x2="130" y2="220" stroke="#55efc4" stroke-width="2" opacity="0.6"/>
+  <line x1="600" y1="300" x2="630" y2="220" stroke="#55efc4" stroke-width="2" opacity="0.6"/>
+  <line x1="350" y1="400" x2="250" y2="350" stroke="#55efc4" stroke-width="2" opacity="0.6"/>
+  <line x1="450" y1="400" x2="510" y2="350" stroke="#55efc4" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Task to Capability connections -->
+  <line x1="400" y1="80" x2="325" y2="100" stroke="#fab1a0" stroke-width="2" opacity="0.6"/>
+  <line x1="400" y1="80" x2="475" y2="100" stroke="#fab1a0" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Neural Network Overlay -->
+  <g opacity="0.3">
+    <line x1="100" y1="75" x2="700" y2="75" stroke="#e17055" stroke-width="1"/>
+    <line x1="100" y1="175" x2="700" y2="175" stroke="#e17055" stroke-width="1"/>
+    <line x1="100" y1="275" x2="700" y2="275" stroke="#e17055" stroke-width="1"/>
+    <line x1="100" y1="375" x2="700" y2="375" stroke="#e17055" stroke-width="1"/>
+  </g>
+  
+  <!-- Glowing Effects -->
+  <circle cx="400" cy="250" r="55" fill="none" stroke="#6c5ce7" stroke-width="2" opacity="0.3">
+    <animate attributeName="r" values="55;60;55" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Labels -->
+  <text x="400" y="470" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#2d3436">Graph Neural Network for Agent Collaboration</text>
+  <text x="400" y="250" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Central Agent</text>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="12" fill="white">Task</text>
+  
+  <!-- Legend -->
+  <circle cx="100" cy="450" r="15" fill="#6c5ce7" opacity="0.8"/>
+  <text x="125" y="455" font-family="Arial" font-size="14" fill="#2d3436">Agents</text>
+  
+  <rect x="200" y="435" width="30" height="30" rx="5" ry="5" fill="#00b894" opacity="0.8"/>
+  <text x="240" y="455" font-family="Arial" font-size="14" fill="#2d3436">Capabilities</text>
+  
+  <polygon points="320,450 335,435 350,450 335,465" fill="#fd79a8" opacity="0.9"/>
+  <text x="360" y="455" font-family="Arial" font-size="14" fill="#2d3436">Tasks</text>
+</svg>

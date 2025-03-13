@@ -1,0 +1,45 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#F0F4FF" />
+  
+  <!-- Body - Door frame -->
+  <rect x="65" y="60" width="70" height="100" rx="5" ry="5" fill="#4A6FFF" />
+  
+  <!-- Door -->
+  <rect x="70" y="65" width="60" height="90" rx="3" ry="3" fill="#FFFFFF" />
+  
+  <!-- Door handle -->
+  <circle cx="120" cy="110" r="5" fill="#FFD700" />
+  
+  <!-- Face -->
+  <circle cx="100" cy="90" r="20" fill="#5DFFA3" />
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="85" r="5" fill="#2A325E" />
+  <circle cx="110" cy="85" r="5" fill="#2A325E" />
+  
+  <!-- Security badge -->
+  <rect x="85" y="110" width="30" height="20" rx="3" ry="3" fill="#FF9E5E" />
+  <rect x="90" y="115" width="20" height="5" fill="#FFFFFF" />
+  <rect x="90" y="123" width="20" height="2" fill="#FFFFFF" />
+  
+  <!-- Security elements -->
+  <circle cx="145" cy="70" r="10" fill="#FF9E5E" stroke="#4A6FFF" stroke-width="2" />
+  <circle cx="55" cy="70" r="10" fill="#FF9E5E" stroke="#4A6FFF" stroke-width="2" />
+  
+  <!-- Lock icons -->
+  <rect x="53" y="67" width="4" height="6" fill="#2A325E" />
+  <rect x="50" y="67" width="10" height="4" rx="2" ry="2" fill="#2A325E" />
+  
+  <rect x="143" y="67" width="4" height="6" fill="#2A325E" />
+  <rect x="140" y="67" width="10" height="4" rx="2" ry="2" fill="#2A325E" />
+  
+  <!-- Mouth - happy secure smile -->
+  <path d="M90,95 Q100,105 110,95" fill="none" stroke="#2A325E" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Key -->
+  <circle cx="100" cy="150" r="12" fill="#FFD700" stroke="#4A6FFF" stroke-width="2" />
+  <rect x="98" y="150" width="20" height="4" fill="#FFD700" stroke="#4A6FFF" stroke-width="1" />
+  <rect x="112" y="148" width="4" height="8" fill="#FFD700" stroke="#4A6FFF" stroke-width="1" />
+  <rect x="114" y="150" width="2" height="4" fill="#4A6FFF" />
+</svg> 

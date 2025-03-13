@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<section class="agent-header bg-light">
+    <div class="container">
+        <div class="agent-profile">
+            <div class="agent-avatar large">
+                {% include svg/{{ page.svg_file }} %}
+            </div>
+            <div class="agent-info">
+                <h1 class="agent-name">{{ page.name }}</h1>
+                <h2 class="agent-role">{{ page.role }}</h2>
+                <div class="agent-traits">
+                    {% for trait in page.traits %}
+                    <span class="agent-trait">{{ trait }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="agent-content">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="agent-details">
+                <h3>About {{ page.name }}</h3>
+                {{ content }}
+                
+                {% if page.capabilities.size > 0 %}
+                <div class="agent-capabilities">
+                    <h3>Capabilities</h3>
+                    <ul class="capability-list">
+                        {% for capability in page.capabilities %}
+                        <li>
+                            <span class="capability-name">{{ capability.name }}</span>
+                            <span class="capability-desc">{{ capability.description }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if page.use_cases.size > 0 %}
+                <div class="agent-use-cases">
+                    <h3>Use Cases</h3>
+                    <div class="use-case-grid">
+                        {% for use_case in page.use_cases %}
+                        <div class="use-case-card">
+                            <h4>{{ use_case.title }}</h4>
+                            <p>{{ use_case.description }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="agent-sidebar">
+                <div class="related-agents">
+                    <h4>Works Well With</h4>
+                    <ul class="related-agent-list">
+                        {% for related in page.works_with %}
+                        <li>
+                            <a href="{{ site.baseurl }}/agents/{{ related.slug }}" class="related-agent">
+                                <div class="mini-avatar">
+                                    {% include svg/{{ related.svg_file }} %}
+                                </div>
+                                <span>{{ related.name }}</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
